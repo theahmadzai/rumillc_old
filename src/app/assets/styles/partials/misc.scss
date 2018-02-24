@@ -1,0 +1,152 @@
+.alert {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+
+  &__close {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    cursor: pointer;
+    opacity: 0.2;
+  }
+
+  &__content {
+    max-width: 95%;
+  }
+
+  &--success {
+    color: #3c763d;
+    background: #d6e9c6;
+    border-color: #d6e9c6;
+  }
+
+  &--error {
+    color: #a94442;
+    background: #f2dede;
+    border: 1px solid #ebccd1;
+  }
+}
+
+.accordion {
+  h3 {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    color: #333333;
+    cursor: pointer;
+    background: $primary;
+    border: 1px solid #eeeeee;
+    outline: 0;
+  }
+
+  div {
+    padding: 1rem;
+    font-size: 0.9em;
+    background: #f8f8f8;
+    border: 1px solid #eeeeee;
+
+    blockquote {
+      position: relative;
+      padding: 1rem;
+      margin: 0;
+      font-style: italic;
+      color: #331f0c;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: FontAwesome;
+        font-size: 0.7em;
+        content: '\f10d';
+      }
+
+      &::after {
+        padding-left: 0.4rem;
+        font-family: FontAwesome;
+        font-size: 0.7em;
+        content: '\f10e';
+      }
+    }
+  }
+
+  .ui-accordion-header-collapsed::after {
+    float: right;
+    font-family: FontAwesome;
+    content: '\f054';
+  }
+
+  .ui-accordion-header-active::after {
+    float: right;
+    font-family: FontAwesome;
+    content: '\f078';
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+
+  &__items {
+    flex-basis: 13%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    border-bottom: 1px solid #eeeeee;
+    outline: none;
+
+    a {
+      display: block;
+      width: inherit;
+      height: inherit;
+      padding: 0.4rem 1rem;
+      font-weight: 600;
+      outline: none;
+    }
+  }
+
+  &__display {
+    flex-basis: 84%;
+    height: 100%;
+    padding: 1rem;
+    background: #f9f9f9;
+  }
+
+  h3 {
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+    color: #444444;
+    border-left: 2px solid $primary;
+    border-radius: 10px;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6rem;
+    color: #444444;
+  }
+}
+
+.ui-state-active {
+  a {
+    color: #ffffff;
+  }
+
+  background: $primary;
+}

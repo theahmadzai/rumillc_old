@@ -1,0 +1,46 @@
+.error {
+  position: relative;
+  min-height: 400px;
+  color: #a4c736;
+
+  h3 {
+    margin-bottom: 2rem;
+    font-family: impact;
+    font-size: 2.5em;
+    font-weight: 200;
+    color: #444;
+  }
+
+  p {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    color: #666;
+
+    @media #{$large} {
+      max-width: 400px;
+    }
+  }
+
+  span {
+    position: relative;
+    display: block;
+    width: 200px;
+    margin: 2rem auto;
+    font-size: 10em;
+    background: #efefef;
+    border-radius: 45%;
+    transform: rotate(315deg);
+
+    @media #{$medium} {
+      width: 350px;
+      font-size: 20em;
+    }
+
+    @media #{$large} {
+      position: absolute;
+      top: 0;
+      right: 2rem;
+      font-size: 20em;
+    }
+  }
+}

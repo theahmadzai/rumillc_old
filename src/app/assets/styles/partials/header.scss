@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.news {
+  display: none;
+  padding: 0.8rem 1rem;
+  overflow: hidden;
+  color: #9d8c81;
+  background: #2d2520;
+  border-radius: 5px 5px 0 0;
+
+  b {
+    padding-right: 0.6rem;
+    color: #fff;
+  }
+}
+
+.topbar {
+  display: flex;
+  padding: 1.5rem 0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $primary;
+    text-decoration: none;
+
+    img {
+      width: 160px;
+      height: 80px;
+    }
+
+    span {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  background: $primary;
+
+  @media #{$small} {
+    flex-direction: column;
+    padding: 0;
+    border-top: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+  }
+
+  &__link {
+    padding: 1rem;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    @media #{$small} {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #fff;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    &:hover {
+      color: $primary;
+      background: #fff;
+
+      @include animate(tada, 1s);
+    }
+
+    &--active {
+      color: $primary;
+      background: #fff;
+    }
+  }
+}

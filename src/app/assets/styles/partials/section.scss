@@ -1,0 +1,42 @@
+.section {
+  margin: 3rem;
+
+  @media #{$small} {
+    margin: 1rem;
+  }
+
+  &__heading {
+    @include animate(bounce, 1s);
+
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #563616;
+    border-bottom: 2px solid $primary;
+
+    @media #{$small} {
+      display: block;
+      text-align: center;
+    }
+
+    i {
+      padding-right: 0.5rem;
+    }
+  }
+
+  &__content {
+    padding: 1.5rem 0;
+    padding-bottom: 3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: #444;
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6rem;
+      color: #444;
+    }
+  }
+}
